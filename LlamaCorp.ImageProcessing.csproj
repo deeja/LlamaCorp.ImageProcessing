@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3746B040-448A-46B7-A5E4-B85D72D3517C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LlamaCorp.ImageProcessing</RootNamespace>
+    <AssemblyName>LlamaCorp.ImageProcessing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\EnumLinkAttribute.cs" />
+    <Compile Include="Dither\Entities\Parameters.cs" />
+    <Compile Include="Dither\Factory.cs" />
+    <Compile Include="Dither\Enums\DitherAlgorithm.cs" />
+    <Compile Include="Dither\Implementations\FalseFloydSteinberg.cs" />
+    <Compile Include="Dither\Implementations\Atkinson.cs" />
+    <Compile Include="Dither\Implementations\Burkes.cs" />
+    <Compile Include="Dither\Implementations\SierraLite.cs" />
+    <Compile Include="Dither\Implementations\TwoRowSierra.cs" />
+    <Compile Include="Dither\Implementations\Sierra.cs" />
+    <Compile Include="Dither\Implementations\Stucki.cs" />
+    <Compile Include="Dither\Implementations\JarvisJudiceNinke.cs" />
+    <Compile Include="Dither\Implementations\OneDimensional.cs" />
+    <Compile Include="Dither\Implementations\SimpleComparison.cs" />
+    <Compile Include="Dither\Implementations\FloydSteinberg.cs" />
+    <Compile Include="Dither\Implementations\TwoDimensional.cs" />
+    <Compile Include="Dither\Interfaces\IDither.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Pixel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
