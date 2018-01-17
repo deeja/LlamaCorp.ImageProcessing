@@ -1,5 +1,0 @@
-C:\dev\_dump\BarcodeCreator\libs\LlamaCorp.ImageProcessing\bin\Debug\LlamaCorp.ImageProcessing.dll
-C:\dev\_dump\BarcodeCreator\libs\LlamaCorp.ImageProcessing\bin\Debug\LlamaCorp.ImageProcessing.pdb
-C:\dev\_dump\BarcodeCreator\libs\LlamaCorp.ImageProcessing\obj\Debug\LlamaCorp.ImageProcessing.csproj.CoreCompileInputs.cache
-C:\dev\_dump\BarcodeCreator\libs\LlamaCorp.ImageProcessing\obj\Debug\LlamaCorp.ImageProcessing.dll
-C:\dev\_dump\BarcodeCreator\libs\LlamaCorp.ImageProcessing\obj\Debug\LlamaCorp.ImageProcessing.pdb
