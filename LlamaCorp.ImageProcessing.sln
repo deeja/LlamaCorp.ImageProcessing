@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlamaCorp.ImageProcessing", "LlamaCorp.ImageProcessing.csproj", "{3746B040-448A-46B7-A5E4-B85D72D3517C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LlamaCorp.ImageProcessing", "src\LlamaCorp.ImageProcessing.csproj", "{EB36CBF1-17EC-4979-A699-241318231BCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{77B026C6-2E4E-42AB-B771-0495C1B6F06E}"
+	ProjectSection(SolutionItems) = preProject
+		test\gradient-h.png = test\gradient-h.png
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLamaCorp.ImageProcessing.Tests", "test\LLamaCorp.ImageProcessing.Tests\LLamaCorp.ImageProcessing.Tests.csproj", "{B29374AF-622E-4622-9F30-492E0FC601E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +18,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3746B040-448A-46B7-A5E4-B85D72D3517C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3746B040-448A-46B7-A5E4-B85D72D3517C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3746B040-448A-46B7-A5E4-B85D72D3517C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3746B040-448A-46B7-A5E4-B85D72D3517C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB36CBF1-17EC-4979-A699-241318231BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB36CBF1-17EC-4979-A699-241318231BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB36CBF1-17EC-4979-A699-241318231BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB36CBF1-17EC-4979-A699-241318231BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29374AF-622E-4622-9F30-492E0FC601E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29374AF-622E-4622-9F30-492E0FC601E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29374AF-622E-4622-9F30-492E0FC601E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29374AF-622E-4622-9F30-492E0FC601E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B29374AF-622E-4622-9F30-492E0FC601E7} = {77B026C6-2E4E-42AB-B771-0495C1B6F06E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A2FCCC24-04B6-4940-BFFD-60DFEBD5B7BB}
