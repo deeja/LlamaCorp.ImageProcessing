@@ -1,11 +1,10 @@
-﻿using LlamaCorp.ImageProcessing.Attributes;
+﻿
 using LlamaCorp.ImageProcessing.Dither.Entities;
-using LlamaCorp.ImageProcessing.Dither.Enums;
+
 using LlamaCorp.ImageProcessing.Dither.Interfaces;
 
 namespace LlamaCorp.ImageProcessing.Dither.Implementations
 {
-    [EnumLink(typeof(DitherAlgorithm), (int) DitherAlgorithm.SierraLite)]
     public class SierraLite : IDither
     {
         public void PerformWork(Image image, Parameters parameters = null)

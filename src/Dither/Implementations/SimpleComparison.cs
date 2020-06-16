@@ -1,6 +1,6 @@
-﻿using LlamaCorp.ImageProcessing.Attributes;
+﻿
 using LlamaCorp.ImageProcessing.Dither.Entities;
-using LlamaCorp.ImageProcessing.Dither.Enums;
+
 using LlamaCorp.ImageProcessing.Dither.Interfaces;
 
 namespace LlamaCorp.ImageProcessing.Dither.Implementations
@@ -9,7 +9,6 @@ namespace LlamaCorp.ImageProcessing.Dither.Implementations
     ///     Simple Comparison compares each pixel value to gray (255 / 2)
     ///     Darker color becomes black, lighter becomes white
     /// </summary>
-    [EnumLink(typeof(DitherAlgorithm), (int) DitherAlgorithm.SimpleComparison)]
     public class SimpleComparison : IDither
     {
         public void PerformWork(Image image, Parameters parameters = null)
