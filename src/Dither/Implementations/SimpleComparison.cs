@@ -5,42 +5,36 @@ using LlamaCorp.ImageProcessing.Dither.Interfaces;
 
 namespace LlamaCorp.ImageProcessing.Dither.Implementations
 {
-  /// <summary>
-  /// Simple Comparison compares each pixel value to gray (255 / 2)
-  /// Darker color becomes black, lighter becomes white
-  /// </summary>
-  [EnumLink(typeof(DitherAlgorithm), (int)DitherAlgorithm.SimpleComparison)]
-  public class SimpleComparison : IDither
-  {
-    public void PerformWork(Image image, Parameters parameters = null)
+    /// <summary>
+    ///     Simple Comparison compares each pixel value to gray (255 / 2)
+    ///     Darker color becomes black, lighter becomes white
+    /// </summary>
+    [EnumLink(typeof(DitherAlgorithm), (int) DitherAlgorithm.SimpleComparison)]
+    public class SimpleComparison : IDither
     {
-      if (parameters == null)
-      {
-        parameters = new Parameters();
-      }
-
-      for (var i = 0; i < image.Pixels.Length; i++)
-      {
-        var pixel = image.Pixels[i];
-        var avg = (pixel.R * parameters.R_Multiplier + pixel.G * parameters.G_Multiplier + pixel.B * parameters.B_Multiplier);
-
-        if (avg < parameters.Threshold)
+        public void PerformWork(Image image, Parameters parameters = null)
         {
-          avg = 0;
+            if (parameters == null)
+            {
+                parameters = new Parameters();
+            }
+
+            for (var i = 0; i < image.Pixels.Length; i++)
+            {
+                var pixel = image.Pixels[i];
+                var avg = pixel.R * parameters.R_Multiplier + pixel.G * parameters.G_Multiplier + pixel.B * parameters.B_Multiplier;
+
+                if (avg < parameters.Threshold)
+                {
+                    avg = 0;
+                }
+                else
+                {
+                    avg = 255;
+                }
+
+                image.Pixels[i] = new Pixel { R = (byte) avg, G = (byte) avg, B = (byte) avg, A = 255 };
+            }
         }
-        else
-        {
-          avg = 255;
-        }
-
-        image.Pixels[i] = new Pixel()
-        {
-          R = (byte)avg,
-          G = (byte)avg,
-          B = (byte)avg,
-          A = 255,
-        };
-      }
     }
-  }
 }

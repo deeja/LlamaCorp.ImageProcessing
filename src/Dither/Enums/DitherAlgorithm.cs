@@ -1,35 +1,35 @@
 ﻿namespace LlamaCorp.ImageProcessing.Dither.Enums
 {
-  public enum DitherAlgorithm
-  {
-    None = 0,
+    public enum DitherAlgorithm
+    {
+        None = 0,
 
-    SimpleComparison,
+        SimpleComparison,
 
-    OneDimensional,
+        OneDimensional,
 
-    TwoDimensional,
+        TwoDimensional,
 
-    FloydSteinberg,
+        FloydSteinberg,
 
-    FalseFloydSteinberg,
+        FalseFloydSteinberg,
 
-    JarvisJudiceNinke,
+        JarvisJudiceNinke,
 
-    Stucki,
+        Stucki,
 
-    Atkinson,
+        Atkinson,
 
-    Burkes,
+        Burkes,
 
-    Sierra3,
+        Sierra3,
 
-    TwoRowSierra,
+        TwoRowSierra,
 
-    SierraLite,
+        SierraLite
 
-    //Bayer4x4,
+        //Bayer4x4,
 
-    //Bayer8x8,
-  }
+        //Bayer8x8,
+    }
 }
